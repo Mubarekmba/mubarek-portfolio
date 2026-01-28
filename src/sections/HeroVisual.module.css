@@ -1,0 +1,89 @@
+/* src/sections/Hero/HeroVisual.module.css */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Atmospheric glow behind the whole cluster */
+.ambientGlow {
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.15) 0%,
+    transparent 70%
+  );
+  filter: blur(50px);
+  z-index: -2;
+  animation: rotateGlow 15s infinite linear;
+}
+
+/* Hot center glow */
+.coreGlow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.35) 0%,
+    transparent 60%
+  );
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.svg {
+  width: 100%;
+  max-width: 500px;
+  overflow: visible;
+  filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.2));
+}
+
+.terminalShell {
+  fill: #0f172a;
+  stroke: rgba(139, 92, 246, 0.4);
+  stroke-width: 2px;
+}
+
+/* Typography styles for SVG text elements */
+.symbol,
+.binary {
+  fill: #8b5cf6;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  opacity: 0.5;
+  filter: drop-shadow(0 0 8px #8b5cf6);
+}
+
+.symbol {
+  font-size: 24px;
+}
+.binary {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.node {
+  fill: #8b5cf6;
+  filter: drop-shadow(0 0 12px #8b5cf6);
+}
+
+/* Animation for the background glow rotation */
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Light mode support */
+:global([data-theme="light"]) .terminalShell {
+  fill: #2c2730;
+  stroke: rgba(139, 92, 246, 0.2);
+}

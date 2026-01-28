@@ -1,0 +1,113 @@
+/* src/components/AppFooter.module.css */
+.footer {
+  padding: 80px 0 0; /* Padding top only, bottom handled by bottomBar */
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.brandSpan {
+  color: #8b5cf6; /* Your brand purple */
+}
+
+.description {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkItem {
+  margin-bottom: 10px;
+}
+
+.link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: #8b5cf6;
+  padding-left: 5px; /* Subtle slide effect */
+}
+
+.socialGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+}
+
+.bottomBar {
+  margin-top: 60px;
+  padding: 25px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    text-align: center;
+    padding-top: 60px;
+  }
+  .description {
+    margin: 0 auto 2rem;
+  }
+  .socialGroup {
+    justify-content: center;
+  }
+  .link:hover {
+    padding-left: 0;
+  }
+}

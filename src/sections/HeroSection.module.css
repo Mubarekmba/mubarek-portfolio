@@ -1,0 +1,81 @@
+.hero {
+  position: relative;
+  padding: 10px 0 100px;
+  background-color: var(--bg);
+  /* Added a subtle glow behind the text */
+  background-image: radial-gradient(
+    circle at 10% 20%,
+    rgba(139, 92, 246, 0.05) 0%,
+    transparent 40%
+  );
+}
+
+.badge {
+  color: #8b5cf6;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 850;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.typewriterWrapper {
+  display: inline-block;
+  min-height: 1.3em;
+}
+
+.highlight {
+  color: #8b5cf6;
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.btnPrimary {
+  background: #8b5cf6 !important;
+  border: none !important;
+  padding: 12px 30px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 10px 20px -5px rgba(139, 92, 246, 0.4);
+  transition: transform 0.2s ease !important;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background: transparent !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+  padding: 12px 30px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    text-align: center;
+    padding-top: 120px;
+  }
+  .description {
+    margin: 1.5rem auto 0;
+  }
+}

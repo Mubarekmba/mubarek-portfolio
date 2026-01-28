@@ -1,0 +1,147 @@
+/* src/sections/About/AboutSection.module.css */
+.aboutSection {
+  padding: 120px 0;
+  background-color: var(--bg);
+  position: relative;
+}
+
+/* Base Glass Card Style for both cards */
+.glassCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  height: 100%;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.glassCard:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+/* Left Card: Profile Specifics */
+.profileContent {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.avatarWrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-2);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.onlineDot {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  background: #22c55e;
+  border: 3px solid var(--bg-2);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+.metaList {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.metaItem {
+  margin-bottom: 15px;
+}
+
+.metaLabel {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.metaValue {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Right Card: Bio & Stats Specifics */
+.bioContent {
+  padding: 50px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.statItem {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
+  border-color: #8b5cf6;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #8b5cf6;
+  font-family: var(--font-display);
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.btnSecondary {
+  background: transparent !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+  padding: 12px 30px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+@media (max-width: 991px) {
+  .bioContent {
+    padding: 30px;
+  }
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+}

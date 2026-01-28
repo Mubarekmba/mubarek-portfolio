@@ -1,0 +1,141 @@
+/* src/sections/Projects/ProjectsSection.module.css */
+.projectSection {
+  padding: 120px 0;
+  background-color: var(--bg);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #8b5cf6;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Fixed Image Aspect Ratio (16:10 is great for web shots) */
+.imgWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .img {
+  transform: scale(1.1);
+}
+
+.category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #8b5cf6;
+  margin-bottom: 8px;
+}
+
+.projectTitle {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  /* Clamp description to 3 lines for clean card alignment */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tagGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.tag {
+  background: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* Modal Specifics */
+.modalContent {
+  background: var(--bg-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 28px !important;
+  backdrop-filter: blur(20px);
+}
+
+.modalImg {
+  border-radius: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+.btnPrimary {
+  background-color: #8b5cf6 !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  padding: 8px 16px !important;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease !important;
+}
+
+.btnPrimary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background-color: transparent !important;
+  /* This variable flips automatically between dark/light themes */
+  border: 1px solid var(--border) !important;
+  color: var(--text) !important;
+  border-radius: 10px !important;
+  font-size: 0.9rem !important;
+  padding: 8px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.btnSecondary:hover {
+  border-color: #8b5cf6 !important;
+  color: #8b5cf6 !important;
+  background-color: rgba(139, 92, 246, 0.05) !important;
+  transform: translateY(-2px);
+}

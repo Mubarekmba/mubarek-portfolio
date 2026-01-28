@@ -1,0 +1,90 @@
+/* src/sections/Skills/SkillsSection.module.css */
+.skillsSection {
+  padding: 120px 0;
+  background-color: var(
+    --bg-2
+  ); /* Slightly different bg to separate sections */
+  position: relative;
+}
+
+.skillCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  height: 100%;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.skillCard:hover {
+  border-color: #8b5cf6;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -10px rgba(139, 92, 246, 0.2);
+}
+
+.categoryTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Make category titles pop with a small purple marker */
+.categoryTitle::before {
+  content: "";
+  width: 4px;
+  height: 18px;
+  background: #8b5cf6;
+  border-radius: 2px;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.skillName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.skillLevel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+/* Minimalist Progress Bar */
+.barContainer {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+@media (max-width: 991px) {
+  .skillsSection {
+    padding: 80px 0;
+  }
+}

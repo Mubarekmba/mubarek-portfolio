@@ -116,7 +116,10 @@ export const siteData = {
         "An aesthetically precise clone of the Apple homepage, emphasizing modern CSS layouts, spacing, and high-quality asset management.",
       tags: ["HTML", "CSS", "JavaScript", "Responsive"],
       image: apple,
-      links: { live: "#", code: "#" },
+      links: {
+        live: "#",
+        code: "https://github.com/Mubarekmba/apple-clone-2025.git",
+      },
     },
   ],
   social: {

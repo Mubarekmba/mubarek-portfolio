@@ -1,13 +1,12 @@
 .hero {
   position: relative;
-  padding: 10px 0 100px;
+
+  padding: 20px 0 80px;
   background-color: var(--bg);
-  /* Added a subtle glow behind the text */
-  background-image: radial-gradient(
-    circle at 10% 20%,
-    rgba(139, 92, 246, 0.05) 0%,
-    transparent 40%
-  );
+  overflow: hidden; /* This clips any stray animation pixels */
+
+  /* Ensure it doesn't force a minimum height that conflicts with body */
+  min-height: auto;
 }
 
 .badge {
@@ -29,11 +28,21 @@
 }
 
 .typewriterWrapper {
-  display: inline-block;
+  /* Use grid to stack words on top of each other in the same spot */
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  vertical-align: bottom;
   min-height: 1.3em;
+  /* lock vertical position so description below doesn't jump */
 }
 
 .highlight {
+  /* Forces all words into the exact same grid cell */
+  grid-area: 1 / 1;
+  white-space: nowrap;
+
+  /* Your existing UI styles */
   color: #8b5cf6;
   background: linear-gradient(135deg, #8b5cf6, #a78bfa);
   -webkit-background-clip: text;
@@ -77,5 +86,10 @@
   }
   .description {
     margin: 1.5rem auto 0;
+  }
+  .typewriterWrapper {
+    /* Center the grid on mobile */
+    display: grid;
+    justify-content: center;
   }
 }
